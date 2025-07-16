@@ -1,2 +1,2 @@
-import './daisy.css'
+import './daisyui.css'
 import './main.css'

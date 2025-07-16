@@ -1,6 +1,6 @@
 {
   "name": "vitesse-webext",
-  "displayName": "Vitesse WebExt",
+  "displayName": "Sound WebExt",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.7.1",
@@ -58,6 +58,7 @@
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
     "tailwindcss": "^4.1.11",
+    "tone": "^15.2.7",
     "typescript": "^5.5.4",
     "unplugin-auto-import": "^0.18.2",
     "unplugin-icons": "^0.19.2",
