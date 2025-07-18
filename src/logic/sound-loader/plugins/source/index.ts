@@ -7,7 +7,7 @@ export interface ISourcePlugin {
 }
 
 // 音源插件管理器
-export class SourcePluginManager {
+export default class SourcePlugin {
   private plugins: ISourcePlugin[] = []
 
   register(plugin: ISourcePlugin) {

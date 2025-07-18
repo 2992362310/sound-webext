@@ -46,6 +46,7 @@ export async function getManifest() {
         matches: [
           '<all_urls>',
         ],
+        exclude_globs: ['*mdpi*', 'localhost'],
         js: [
           'dist/contentScripts/index.global.js',
         ],

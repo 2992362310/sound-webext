@@ -1,22 +1,25 @@
 @reference "./daisyui.css"
 
-html,
-body,
-#app {
-  margin: 0;
-  padding: 0;
-}
-
-/* .btn {
-  @apply px-4 py-1 rounded inline-block
-    bg-teal-600 text-white cursor-pointer
-    hover:bg-teal-700
-    disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50;
-} */
-
 .icon-btn {
   @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out
     hover:opacity-100 hover:text-teal-600;
   font-size: 0.9em;
+}
+
+.circle-btn {
+  @apply btn btn-circle btn-xs;
+  font-size: 1em;
+}
+
+.bg-card {
+  @apply p-4 mt-2 rounded-box shadow-lg bg-base-100
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-center {
+  @apply flex items-center justify-center gap-2;
 }

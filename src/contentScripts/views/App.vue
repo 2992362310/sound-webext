@@ -18,29 +18,6 @@ const [show, toggle] = useToggle(false)
         Sound WebExt
       </h1>
       <SharedSubtitle />
-
-      <div class="avatar-group -space-x-6">
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp">
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp">
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp">
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="w-12">
-            <img src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp">
-          </div>
-        </div>
-      </div>
     </div>
     <button
       class="flex w-10 h-10 rounded-full shadow cursor-pointer border-none bg-teal-600 hover:bg-teal-700"

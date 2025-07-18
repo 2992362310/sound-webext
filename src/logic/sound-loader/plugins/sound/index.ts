@@ -6,7 +6,7 @@ export interface IProcessorPlugin {
 }
 
 // 处理插件管理器
-export class ProcessorPluginManager {
+export default class SoundPlugin {
   private plugins: IProcessorPlugin[] = []
 
   register(plugin: IProcessorPlugin) {
