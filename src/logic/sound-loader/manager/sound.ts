@@ -1,18 +1,5 @@
 import * as Tone from 'tone'
-
-export interface ISoundInfo {
-  song: string
-  singer: string
-  url: string
-  thumbnail: string
-  lyrics: string
-}
-
-interface ISoundItem {
-  cid: string
-  info: ISoundInfo
-  player?: Tone.Player
-}
+import type { ISoundInfo, ISoundItem } from '../types'
 
 export default class SoundManager {
   sounds: ISoundItem[]
@@ -26,6 +13,7 @@ export default class SoundManager {
   add(info: ISoundInfo) {
     const cid = crypto.randomUUID()
     this.sounds.push({ cid, info })
+    return cid
   }
 
   remove(cid: string) {
@@ -94,5 +82,10 @@ export default class SoundManager {
     const { sounds, cid } = this
     const index = sounds.findIndex(item => item.cid === cid)
     return index > -1 ? index : 0
+  }
+
+  getSounds() {
+    const { sounds } = this
+    return { ...sounds }
   }
 }

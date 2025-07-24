@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { onClickOutside } from '@vueuse/core'
+import { useTemplateRef } from 'vue'
+
 const emits = defineEmits<{
   (e: 'update', volue: number): void
 }>()
@@ -12,6 +15,13 @@ const volume = defineModel<number>({
 
 let tempVolume = volume.value
 const showControl = ref(false)
+
+const target = useTemplateRef<HTMLElement>('target')
+onClickOutside(target, (event) => {
+  if (event.target !== target.value) {
+    showControl.value = false
+  }
+})
 
 function handleControl() {
   showControl.value = !showControl.value
@@ -38,7 +48,7 @@ watch(volume, (val) => {
       <mdi-volume-control class="h-5 w-5" />
     </button>
 
-    <div v-if="showControl" class="absolute bg-card flex items-center gap-1 mt-1">
+    <div v-if="showControl" ref="target" class="absolute bg-card flex items-center gap-1 mt-1">
       <button class="btn btn-xs btn-ghost btn-circle" @click="handleVolume">
         <mdi-mute v-if="volume === 0" class="h-4 w-4" />
         <mdi-volume v-else class="h-4 w-4" />

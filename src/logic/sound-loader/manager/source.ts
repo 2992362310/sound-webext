@@ -1,3 +1,5 @@
+import type SourcePlugin from '../plugins/source'
+
 // 分类信息
 interface ICategory {
   name: string // 分类名
@@ -13,7 +15,13 @@ interface ISource {
 }
 
 export default class SourceManager {
-  sources: ISource[] = []
+  plugin: SourcePlugin
+  sources: ISource[]
+
+  constructor(sourcePlugin: SourcePlugin) {
+    this.plugin = sourcePlugin
+    this.sources = []
+  }
 
   // 添加平台
   addSource(name: string, url: string) {
