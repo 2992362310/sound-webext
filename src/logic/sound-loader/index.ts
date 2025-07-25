@@ -1,7 +1,7 @@
-import SoundManager from './manager/sound'
-import SourceManager from './manager/source'
-import SoundPlugin from './plugins/sound'
-import SourcePlugin from './plugins/source'
+import SoundManager from './sound-manager'
+import SourceManager from './source-manager'
+import SoundPlugin from './sound-plugin'
+import SourcePlugin from './source-plugin'
 
 function initSoundLoader() {
   const sourcePlugin = new SourcePlugin()

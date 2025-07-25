@@ -1,4 +1,4 @@
-import type SourcePlugin from '../plugins/source'
+import type SourcePlugin from './source-plugin'
 
 // 分类信息
 interface ICategory {

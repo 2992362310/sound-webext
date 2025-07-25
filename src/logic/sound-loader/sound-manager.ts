@@ -1,5 +1,5 @@
 import * as Tone from 'tone'
-import type { ISoundInfo, ISoundItem } from '../types'
+import type { ISoundInfo, ISoundItem } from './types'
 
 export default class SoundManager {
   sounds: ISoundItem[]
